@@ -1,12 +1,12 @@
-import {resourcesLinks, platformLinks, communityLinks} from "../constants";
+import {platformLinks} from "../constants";
 import {monitors} from "../constants";
 
 const Footer = () => {
     return (
         <footer className="mt-20 border-t py-10 border-neutral-700">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mx-20 text-red-500">
-                {/* Platform Section (Left Aligned) */}
-                <div className="text-left">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mx-4 lg:mx-20 text-red-500">
+                {/* Platform Section (Left Aligned on Large Screens, Centered on Small Screens) */}
+                <div className="text-center lg:text-left">
                     <h3 className="text-md font-semibold mb-4">Platform</h3>
                     <ul className="space-y-2">
                         {platformLinks.map((link, index) => (
@@ -22,7 +22,7 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                {/* Hostel Superintendent Section (Centered) */}
+                {/* Hostel Superintendent Section (Centered on All Screens) */}
                 <div className="text-center text-neutral-300">
                     <h3 className="text-md font-semibold mb-4 text-red-500">
                         Hostel Superintendent
@@ -35,8 +35,8 @@ const Footer = () => {
                     </p>
                 </div>
 
-                {/* Monitors Section (Right Aligned) */}
-                <div className="text-right">
+                {/* Monitors Section (Right Aligned on Large Screens, Centered on Small Screens) */}
+                <div className="text-center lg:text-right">
                     <h3 className="text-md font-semibold mb-4">Monitors</h3>
                     <ul className="space-y-2">
                         {monitors.map((monitor, index) => (

@@ -18,12 +18,12 @@ const HeroSection = () => {
             </p>
             <div className="flex justify-center my-8 sm:my-10">
                 <a
-                    href="#"
+                    href="#footer"
                     className="bg-gradient-to-r from-red-400 to-red-700 py-3 px-2 sm:px-4 mx-3 rounded-md"
                 >
                     Contact Us
                 </a>
-                <a href="#" className="py-3 px-4 mx-3 rounded-md border">
+                <a href="/history" className="py-3 px-4 mx-3 rounded-md border">
                     Brief History
                 </a>
             </div>
@@ -31,12 +31,12 @@ const HeroSection = () => {
                 <img
                     src={photo1}
                     alt="Hostel 2 at Jorhat Engineering College"
-                    className="rounded-lg w-1/2 sm:w-1/3 border border-red-500 shadow-sm shadow-red-300 mx-3"
+                    className="rounded-lg w-full sm:w-1/3 border border-red-500 shadow-sm shadow-red-300 mb-4 sm:mb-0 sm:mx-3"
                 />
                 <img
                     src={photo2}
                     alt="Hostel 2 at Jorhat Engineering College"
-                    className="rounded-lg w-1/2 sm:w-1/3 border border-red-500 shadow-sm shadow-red-300 mx-3"
+                    className="rounded-lg w-full sm:w-1/3 border border-red-500 shadow-sm shadow-red-300 mb-4 sm:mb-0 sm:mx-3"
                 />
             </div>
         </div>
