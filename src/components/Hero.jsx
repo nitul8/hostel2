@@ -1,6 +1,6 @@
 import photo1 from "../assets/h2Front.jpeg";
 import photo2 from "../assets/h2Garden.jpeg";
-import History from "./components/History";
+import History from "./History";
 
 const HeroSection = () => {
     return (
@@ -40,7 +40,6 @@ const HeroSection = () => {
                     className="rounded-lg w-full sm:w-1/3 border border-red-500 shadow-sm shadow-red-300 mb-4 sm:mb-0 sm:mx-3"
                 />
             </div>
-            <Route path="/history" element={<History />} />
         </div>
     );
 };
