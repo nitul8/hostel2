@@ -15,8 +15,8 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<HeroSection />} />
                     <Route path="/facilities" element={<Facilities />} />
-                    <Route path="/boarders" element={<History />} />
-                    <Route path="/bh" element={<Boarders />} />
+                    <Route path="/boarders" element={<Boarders />} />
+                    <Route path="/history" element={<History />} />
                 </Routes>
                 <Footer />
             </div>
