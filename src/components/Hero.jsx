@@ -23,7 +23,10 @@ const HeroSection = () => {
                 >
                     Contact Us
                 </a>
-                <a href="/history" className="py-3 px-4 mx-3 rounded-md border">
+                <a
+                    href="/briefhistory"
+                    className="py-3 px-4 mx-3 rounded-md border"
+                >
                     Brief History
                 </a>
             </div>
