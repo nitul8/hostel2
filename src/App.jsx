@@ -5,7 +5,7 @@ import HeroSection from "./components/Hero";
 import Facilities from "./components/Facilities";
 import Footer from "./components/Footer";
 import Boarders from "./components/Boarders";
-import History from "./components/History";
+import BriefHistory from "./components/BriefHistory";
 
 const App = () => {
     return (
@@ -16,7 +16,7 @@ const App = () => {
                     <Route path="/" element={<HeroSection />} />
                     <Route path="/facilities" element={<Facilities />} />
                     <Route path="/boarders" element={<Boarders />} />
-                    <Route path="/history" element={<History />} />
+                    <Route path="/history" element={<BriefHistory />} />
                 </Routes>
                 <Footer />
             </div>

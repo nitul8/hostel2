@@ -1,6 +1,6 @@
 import React from "react";
 
-const History = () => {
+const BriefHistory = () => {
     return (
         <div className="relative mt-10 border-b border-neutral-800 min-h-[800px]">
             <h2 className="text-3xl sm:text-5xl lg:text-6xl text-center my-10 lg:my-14 bg-gradient-to-r from-red-400 to-red-700 bg-clip-text text-transparent">
@@ -135,4 +135,4 @@ const History = () => {
     );
 };
 
-export default History;
+export default BriefHistory;

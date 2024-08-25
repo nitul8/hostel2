@@ -1,6 +1,5 @@
 import photo1 from "../assets/h2Front.jpeg";
 import photo2 from "../assets/h2Garden.jpeg";
-import History from "./History";
 
 const HeroSection = () => {
     return (
