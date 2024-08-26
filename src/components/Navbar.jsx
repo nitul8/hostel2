@@ -23,7 +23,7 @@ const Navbar = () => {
                                 alt="LOGO"
                             />
                             <span className="text-xl tracking-tight">
-                                Hostel2
+                                Hostel 2
                             </span>
                         </div>
                         <ul className="hidden lg:flex ml-14 space-x-12">
