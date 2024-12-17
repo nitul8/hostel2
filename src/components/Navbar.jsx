@@ -28,11 +28,17 @@ const Navbar = () => {
                         </div>
                         <ul className="hidden lg:flex ml-14 space-x-12">
                             {navItems.map((item, index) => (
-                                <li key={index}>
-                                    <Link to={item.href}>{item.label}</Link>
+                                <li
+                                    key={index}
+                                    className="px-3 py-2 rounded-md hover:bg-gradient-to-r from-red-400 to-red-700 transition duration-300 ease-in-out"
+                                >
+                                    <Link to={item.href} className="text-white">
+                                        {item.label}
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
+
                         <div className="hidden lg:flex justify-center space-x-12 items-center">
                             <a href="#" className="py-2 px-2 border rounded-md">
                                 Sign In

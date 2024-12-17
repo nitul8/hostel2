@@ -223,6 +223,10 @@ export const platformLinks = [
     {href: "https://www.instagram.com/hostel2.jec/", text: "Instagram"},
     {href: "https://www.facebook.com/HOSTEL2JEC", text: "Facebook"},
     {href: "mailto:hostel2.jec1960@gmail.com", text: "Gmail"},
+    {
+        href: "https://youtube.com/@jechostel2?si=rcOVnBpa67QJ1d9J",
+        text: "Youtube",
+    },
 ];
 
 export const communityLinks = [
@@ -240,8 +244,8 @@ export const monitors = [
         designation: "Monitor",
     },
     {
-        name: "Bishal Kashyap",
-        contact: "+91 70027 46545",
+        name: "Boktar Hussain",
+        contact: "+91 98642 27532",
         designation: "Sports Monitor",
     },
     {

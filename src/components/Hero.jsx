@@ -19,7 +19,7 @@ const HeroSection = () => {
             <div className="flex justify-center my-8 sm:my-10">
                 <a
                     href="#footer"
-                    className="bg-gradient-to-r from-red-400 to-red-700 py-3 px-2 sm:px-4 mx-3 rounded-md"
+                    className="bg-gradient-to-r from-red-400 to-red-700 py-3 px-2 sm:px-4 mx-3 rounded-md "
                 >
                     Contact Us
                 </a>
