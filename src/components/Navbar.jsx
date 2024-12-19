@@ -42,11 +42,11 @@ const Navbar = () => {
                                         </Link>
                                     </li>
                                 ))}
-                                {/* <li>
+                                <li>
                                     <Link to="/login">
                                         <CircleUser className="h-8 w-8 text-white" />
                                     </Link>
-                                </li> */}
+                                </li>
                             </ul>
                         </div>
 

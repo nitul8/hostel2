@@ -1,66 +1,80 @@
-import {useState} from "react";
-import {boarders} from "../constants";
+import React, {useState} from "react";
+
+const boarders = [
+    {name: "Nitul Das", branch: "CSE", address: "123 ABC St", batch: "2022-26"},
+    {
+        name: "Debabrat Deka",
+        branch: "IE",
+        address: "456 XYZ St",
+        batch: "2021-25",
+    },
+];
 
 const Boarders = () => {
-    // Function to truncate text to a specific number of words
-    const truncateText = (text, wordLimit) => {
-        const words = text.split(" ");
-        if (words.length > wordLimit) {
-            return words.slice(0, wordLimit).join(" ") + "...";
-        }
-        return text;
+    const [sortOrder, setSortOrder] = useState("asc"); // State to track sorting order
+    const [sortedBoarders, setSortedBoarders] = useState(boarders); // State to hold sorted boarders
+
+    // Function to handle sorting by batch
+    const sortByBatch = () => {
+        const sorted = [...boarders].sort((a, b) => {
+            // If sorting ascending, compare a.batch and b.batch in ascending order
+            if (sortOrder === "asc") {
+                return a.batch > b.batch ? 1 : -1;
+            }
+            // If sorting descending, compare in reverse order
+            return a.batch < b.batch ? 1 : -1;
+        });
+        setSortedBoarders(sorted); // Update the sorted list
+        setSortOrder(sortOrder === "asc" ? "desc" : "asc"); // Toggle sort order
     };
 
     return (
-        <div className="mt-10 tracking-wide">
-            <h2 className="text-3xl sm:text-5xl lg:text-6xl text-center my-10 lg:my-14 bg-gradient-to-r from-red-400 to-red-700 bg-clip-text text-transparent">
-                Boarders of Hostel 2
+        <div className="max-w-7xl mx-auto p-6">
+            <h2 className="text-3xl font-semibold text-center my-6">
+                Boarders List
             </h2>
-            <div className="flex flex-wrap justify-center">
-                {boarders.map((boarder, index) => {
-                    const [showFullText, setShowFullText] = useState(false);
-
-                    return (
-                        <div
-                            key={index}
-                            className="w-full sm:w-1/2 lg:w-1/3 px-4 py-2"
-                        >
-                            <div className="bg-neutral-900 rounded-md p-6 text-md border border-neutral-800 font-thin">
-                                <p>
-                                    <span>
-                                        {showFullText
-                                            ? boarder.text
-                                            : truncateText(boarder.text, 20)}
-                                    </span>
-                                    <button
-                                        onClick={() =>
-                                            setShowFullText(!showFullText)
-                                        }
-                                        className="text-red-500 ml-2 text-xs"
-                                        style={{display: "inline"}}
-                                    >
-                                        {showFullText
-                                            ? "Show Less"
-                                            : "Read More"}
-                                    </button>
-                                </p>
-                                <div className="flex mt-8 items-start">
-                                    <img
-                                        className="w-12 h-12 mr-6 rounded-full border border-neutral-300"
-                                        src={boarder.image}
-                                        alt=""
-                                    />
-                                    <div>
-                                        <h6>{boarder.user}</h6>
-                                        <span className="text-sm font-normal italic text-neutral-600">
-                                            {boarder.dept}
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    );
-                })}
+            <div className="overflow-x-auto">
+                <table className="min-w-full bg-white shadow-lg rounded-lg border border-gray-200">
+                    <thead>
+                        <tr className="bg-gray-100">
+                            <th className="py-2 px-4 text-left text-sm font-medium text-gray-700">
+                                Name
+                            </th>
+                            <th className="py-2 px-4 text-left text-sm font-medium text-gray-700">
+                                Branch
+                            </th>
+                            <th className="py-2 px-4 text-left text-sm font-medium text-gray-700">
+                                Address
+                            </th>
+                            <th className="py-2 px-4 text-left text-sm font-medium text-gray-700">
+                                <button
+                                    onClick={sortByBatch}
+                                    className="text-blue-500 hover:underline"
+                                >
+                                    Batch {sortOrder === "asc" ? "↑" : "↓"}
+                                </button>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {sortedBoarders.map((boarder, index) => (
+                            <tr key={index} className="border-t">
+                                <td className="py-2 px-4 text-sm text-gray-900">
+                                    {boarder.name}
+                                </td>
+                                <td className="py-2 px-4 text-sm text-gray-900">
+                                    {boarder.branch}
+                                </td>
+                                <td className="py-2 px-4 text-sm text-gray-900">
+                                    {boarder.address}
+                                </td>
+                                <td className="py-2 px-4 text-sm text-gray-900">
+                                    {boarder.batch}
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
             </div>
         </div>
     );

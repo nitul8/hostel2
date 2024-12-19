@@ -6,6 +6,8 @@ import Facilities from "./components/Facilities";
 import Footer from "./components/Footer";
 import Boarders from "./components/Boarders";
 import Login from "./components/Login";
+import Register from "./components/Register";
+import Memories from "./components/Memories";
 
 const App = () => {
     return (
@@ -15,8 +17,10 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<HeroSection />} />
                     <Route path="/facilities" element={<Facilities />} />
-                    <Route path="/boarders" element={<Boarders />} />
+                    {/* <Route path="/boarders" element={<Boarders />} /> 
+                    <Route path="/memories" element={<Memories />} />
                     <Route path="/login" element={<Login />} />
+                    <Route path="/register" element={<Register />} />*/}
                 </Routes>
                 <Footer />
             </div>

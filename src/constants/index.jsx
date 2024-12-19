@@ -26,7 +26,7 @@ export const navItems = [
     {label: "Facilities", href: "/facilities"},
     {label: "Achievements", href: "#achievements"},
     {label: "Gallery", href: "#gallery"},
-    {label: "Contact", href: "#contact"},
+    {label: "Memories", href: "/memories"},
 ];
 
 export const boarders = [
