@@ -1,5 +1,5 @@
-import photo1 from "../assets/h2Front.jpeg";
-import photo2 from "../assets/h2Garden.jpeg";
+import React from "react";
+import Images from "./Images";
 
 const HeroSection = () => {
     return (
@@ -31,19 +31,9 @@ const HeroSection = () => {
                         Brief History
                     </a>
                 </div>
-                <div className="flex flex-wrap mt-7 sm:mt-10 justify-center">
-                    <img
-                        src={photo1}
-                        alt="Hostel 2 at Jorhat Engineering College"
-                        className="rounded-lg w-full sm:w-1/3 border border-red-500 shadow-sm shadow-red-300 mb-4 sm:mb-0 sm:mx-3"
-                    />
-                    <img
-                        src={photo2}
-                        alt="Hostel 2 at Jorhat Engineering College"
-                        className="rounded-lg w-full sm:w-1/3 border border-red-500 shadow-sm shadow-red-300 mb-4 sm:mb-0 sm:mx-3"
-                    />
-                </div>
             </div>
+
+            <Images />
 
             {/* Brief History Section */}
             <div
