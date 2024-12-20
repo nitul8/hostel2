@@ -1,3 +1,4 @@
+//icons
 import {Medal} from "lucide-react";
 import {Trophy} from "lucide-react";
 import {Brush} from "lucide-react";
@@ -8,6 +9,7 @@ import {PawPrint} from "lucide-react";
 import {Clapperboard} from "lucide-react";
 import {MicVocal} from "lucide-react";
 
+//Boarders Pic
 import nitul from "../assets/Nitul_Das.jpeg";
 import samim from "../assets/Samim_Aktar.jpeg";
 import bishal from "../assets/Bishal_Kashyap.jpg";
@@ -20,6 +22,11 @@ import saruraj from "../assets/Saruraj_Gohain.jpeg";
 import shekhar from "../assets/Shekhar_Ghatuar.jpeg";
 import debabrat from "../assets/Debabrat_Deka.jpeg";
 
+//Hostel Pic
+import image1 from "../assets/h2Front.jpeg";
+import image2 from "../assets/h2Garden.jpeg";
+
+//Nav Items
 export const navItems = [
     {label: "Home", href: "/"},
     {label: "Boarders", href: "/boarders"},
@@ -29,6 +36,7 @@ export const navItems = [
     {label: "Memories", href: "/memories"},
 ];
 
+//Memories
 export const boarders = [
     {
         user: "Nitul Das",
@@ -98,6 +106,7 @@ export const boarders = [
     },
 ];
 
+//Facilities
 export const facilities = [
     {
         icon: <School />,
@@ -155,6 +164,7 @@ export const facilities = [
     },
 ];
 
+//Achievements
 export const checklistItems = [
     {
         title: "Code merge made easy",
@@ -178,47 +188,7 @@ export const checklistItems = [
     },
 ];
 
-export const pricingOptions = [
-    {
-        title: "Free",
-        price: "$0",
-        features: [
-            "Private board sharing",
-            "5 Gb Storage",
-            "Web Analytics",
-            "Private Mode",
-        ],
-    },
-    {
-        title: "Pro",
-        price: "$10",
-        features: [
-            "Private board sharing",
-            "10 Gb Storage",
-            "Web Analytics (Advance)",
-            "Private Mode",
-        ],
-    },
-    {
-        title: "Enterprise",
-        price: "$200",
-        features: [
-            "Private board sharing",
-            "Unlimited Storage",
-            "High Performance Network",
-            "Private Mode",
-        ],
-    },
-];
-
-export const resourcesLinks = [
-    {href: "#", text: "Getting Started"},
-    {href: "#", text: "Documentation"},
-    {href: "#", text: "Tutorials"},
-    {href: "#", text: "API Reference"},
-    {href: "#", text: "Community Forums"},
-];
-
+//Social Media Links
 export const platformLinks = [
     {href: "https://www.instagram.com/hostel2.jec/", text: "Instagram"},
     {href: "https://www.facebook.com/HOSTEL2JEC", text: "Facebook"},
@@ -229,14 +199,7 @@ export const platformLinks = [
     },
 ];
 
-export const communityLinks = [
-    {href: "#", text: "Events"},
-    {href: "#", text: "Meetups"},
-    {href: "#", text: "Conferences"},
-    {href: "#", text: "Hackathons"},
-    {href: "#", text: "Jobs"},
-];
-
+//Monitors
 export const monitors = [
     {
         name: "Aadrit Bora",
@@ -253,4 +216,10 @@ export const monitors = [
         contact: "+91 91017 54123",
         designation: "Mess Monitor",
     },
+];
+
+//Gallery
+export const slides = [
+    {name: "Hostel 2 Front View", src: image1},
+    {name: "Hostel 2 Garden", src: image2},
 ];

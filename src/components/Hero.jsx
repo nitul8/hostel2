@@ -33,7 +33,7 @@ const HeroSection = () => {
                 </div>
             </div>
 
-            {/* <Images /> */}
+            <Images />
 
             {/* Brief History Section */}
             <div

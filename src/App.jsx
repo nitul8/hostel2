@@ -9,6 +9,7 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import Memories from "./components/Memories";
 import Maintenance from "./components/Maintainance";
+import ThemeColor from "./components/ThemeColor";
 
 const App = () => {
     return (
@@ -25,6 +26,7 @@ const App = () => {
                 </Routes>
                 <Footer />
             </div>
+            <ThemeColor />
         </Router>
         // <Maintenance />
     );
