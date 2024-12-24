@@ -2,11 +2,11 @@ import React from "react";
 
 const Maintenance = () => {
     return (
-        <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
+        <div className="flex flex-col items-center justify-center w-full h-screen bg-gray-100">
             <img
                 src="https://cdni.iconscout.com/illustration/premium/thumb/website-under-maintenance-illustration-download-in-svg-png-gif-file-formats--application-error-network-software-system-pack-design-development-illustrations-3658847.png"
                 alt="Maintenance"
-                className="w-1/3 mb-8"
+                className="w-1/4 mb-8"
             />
             <h1 className="text-3xl font-bold text-gray-800 mb-4">
                 Website Under Maintenance

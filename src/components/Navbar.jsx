@@ -8,68 +8,78 @@ const Navbar = () => {
     const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
 
     const toggleNavbar = () => {
-        setMobileDrawerOpen(!mobileDrawerOpen);
+        setMobileDrawerOpen((prev) => !prev);
     };
 
     return (
-        <div>
-            <nav className="fixed w-full top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/80">
-                <div className="container px-4 mx-auto relative text-sm">
-                    <div className="flex justify-between items-center">
-                        <div className="flex items-center justify-between w-full px-8 py-2">
-                            <div className="flex items-center flex-shrink-0">
-                                <img
-                                    className="h-12 w-12 mr-3"
-                                    src={logo}
-                                    alt="LOGO"
-                                />
-                                <span className="text-2xl font-semibold text-white tracking-tight">
-                                    Hostel 2
-                                </span>
-                            </div>
-
-                            <ul className="hidden lg:flex items-center space-x-8">
-                                {navItems.map((item, index) => (
-                                    <li
-                                        key={index}
-                                        className="px-4 py-2 rounded-md hover:bg-gradient-to-r from-red-400 to-red-700 transition duration-300 ease-in-out"
-                                    >
-                                        <Link
-                                            to={item.href}
-                                            className="text-white"
-                                        >
-                                            {item.label}
-                                        </Link>
-                                    </li>
-                                ))}
-                                <li>
-                                    <Link to="/login">
-                                        <CircleUser className="h-8 w-8 text-white" />
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div className="lg:hidden md:flex flex-col justify-end">
-                            <button onClick={toggleNavbar}>
-                                {mobileDrawerOpen ? <X /> : <Menu />}
-                            </button>
-                        </div>
-                    </div>
-                    {mobileDrawerOpen && (
-                        <div className="fixed right-0 z-20 bg-neutral-900 w-full p-12 flex flex-col justify-center items-center lg:hidden">
-                            <ul>
-                                {navItems.map((item, index) => (
-                                    <li key={index} className="py-4">
-                                        <Link to={item.href}>{item.label}</Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    )}
+        <header className="fixed w-full top-0 z-50 bg-opacity-90 backdrop-blur-md h-20 flex items-center">
+            <div className="container mx-auto flex items-center justify-between px-6">
+                {/* Logo Section */}
+                <div className="flex items-center">
+                    <img
+                        className="h-8 w-8 mr-2"
+                        src={logo}
+                        alt="Hostel Logo"
+                    />
+                    <span className="text-lg font-semibold text-black dark:text-white">
+                        Hostel 2
+                    </span>
                 </div>
-            </nav>
-        </div>
+
+                {/* Desktop Navigation */}
+                <nav className="hidden lg:flex items-center space-x-6">
+                    {navItems.map((item, index) => (
+                        <Link
+                            key={index}
+                            to={item.href}
+                            className="text-base text-black dark:text-white hover:bg-gradient-to-r from-red-400 to-red-700 px-2 py-1 rounded-md transition ease-in-out duration-300"
+                        >
+                            {item.label}
+                        </Link>
+                    ))}
+                    <Link to="/login">
+                        <CircleUser className="h-6 w-6 text-black dark:text-white hover:text-red-500 transition duration-300" />
+                    </Link>
+                </nav>
+
+                {/* Mobile Menu Button */}
+                <button
+                    onClick={toggleNavbar}
+                    className="lg:hidden text-black dark:text-white focus:outline-none"
+                    aria-label="Toggle navigation"
+                >
+                    {mobileDrawerOpen ? (
+                        <X className="h-6 w-6" />
+                    ) : (
+                        <Menu className="h-6 w-6" />
+                    )}
+                </button>
+            </div>
+
+            {/* Mobile Navigation */}
+            {mobileDrawerOpen && (
+                <div className="fixed inset-0 bg-neutral-900 bg-opacity-95 flex flex-col items-center justify-center z-40 lg:hidden">
+                    <ul className="space-y-3 text-center">
+                        {navItems.map((item, index) => (
+                            <li key={index}>
+                                <Link
+                                    to={item.href}
+                                    className="text-white text-base hover:text-red-400 transition duration-300"
+                                    onClick={toggleNavbar}
+                                >
+                                    {item.label}
+                                </Link>
+                            </li>
+                        ))}
+                        <li>
+                            <Link to="/login" onClick={toggleNavbar}>
+                                <CircleUser className="h-8 w-8 text-white hover:text-red-400 transition duration-300" />
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+            )}
+        </header>
     );
 };
 

@@ -1,5 +1,6 @@
 import React from "react";
 import Images from "./Images";
+//import ImageSlider from "./ImageSlider";
 
 const HeroSection = () => {
     return (
@@ -34,6 +35,7 @@ const HeroSection = () => {
             </div>
 
             <Images />
+            {/* <ImageSlider /> */}
 
             {/* Brief History Section */}
             <div

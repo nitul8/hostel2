@@ -13,22 +13,22 @@ import ThemeColor from "./components/ThemeColor";
 
 const App = () => {
     return (
-        <Router>
-            <Navbar />
-            <div className="max-w-7xl mx-auto pt-20 px-6">
-                <Routes>
-                    <Route path="/" element={<HeroSection />} />
-                    <Route path="/facilities" element={<Facilities />} />
-                    <Route path="/boarders" element={<Boarders />} />
-                    <Route path="/memories" element={<Memories />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/register" element={<Register />} />
-                </Routes>
-                <Footer />
-            </div>
-            <ThemeColor />
-        </Router>
-        // <Maintenance />
+        // <Router>
+        //     <Navbar />
+        //     <div className="max-w-7xl mx-auto pt-20 px-6">
+        //         <Routes>
+        //             <Route path="/" element={<HeroSection />} />
+        //             <Route path="/facilities" element={<Facilities />} />
+        //             <Route path="/boarders" element={<Boarders />} />
+        //             <Route path="/memories" element={<Memories />} />
+        //             <Route path="/login" element={<Login />} />
+        //             <Route path="/register" element={<Register />} />
+        //         </Routes>
+        //         <Footer />
+        //     </div>
+        //     <ThemeColor />
+        // </Router>
+        <Maintenance />
     );
 };
 

@@ -23,8 +23,8 @@ import shekhar from "../assets/Shekhar_Ghatuar.jpeg";
 import debabrat from "../assets/Debabrat_Deka.jpeg";
 
 //Hostel Pic
-import image1 from "../assets/h2Front.jpeg";
-import image2 from "../assets/h2Garden.jpeg";
+import image1 from "../assets/h21.jpeg";
+import image2 from "../assets/h22.jpeg";
 
 //Nav Items
 export const navItems = [
