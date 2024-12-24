@@ -15,13 +15,13 @@ const Navbar = () => {
         <header className="fixed w-full top-0 z-50 bg-opacity-90 backdrop-blur-md h-20 flex items-center">
             <div className="container mx-auto flex items-center justify-between px-6">
                 {/* Logo Section */}
-                <div className="flex items-center">
+                <div className="flex items-center mx-4">
                     <img
-                        className="h-8 w-8 mr-2"
+                        className="h-10 w-10 mr-2"
                         src={logo}
                         alt="Hostel Logo"
                     />
-                    <span className="text-lg font-semibold text-black dark:text-white">
+                    <span className="text-2xl font-semibold text-black dark:text-white">
                         Hostel 2
                     </span>
                 </div>
@@ -32,7 +32,7 @@ const Navbar = () => {
                         <Link
                             key={index}
                             to={item.href}
-                            className="text-base text-black dark:text-white hover:bg-gradient-to-r from-red-400 to-red-700 px-2 py-1 rounded-md transition ease-in-out duration-300"
+                            className="text-base text-black dark:text-white hover:bg-gradient-to-r from-red-400 to-red-700 hover:text-white px-2 py-1 rounded-md transition ease-in-out duration-300"
                         >
                             {item.label}
                         </Link>

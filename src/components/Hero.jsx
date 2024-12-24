@@ -4,7 +4,7 @@ import Images from "./Images";
 
 const HeroSection = () => {
     return (
-        <>
+        <div className=" text-black dark:text-white text-lg">
             <div className="flex flex-col items-center mt-6 lg:mt-10">
                 <h1 className="text-3xl sm:text-6xl lg:text-7xl text-center tracking-wide">
                     Welcome to
@@ -18,16 +18,16 @@ const HeroSection = () => {
                     aspirations, and transformations of countless souls from boy
                     to man.
                 </p>
-                <div className="flex justify-center my-8 sm:my-10">
+                <div className="flex justify-center my-8 sm:my-10 font-semibold">
                     <a
                         href="#footer"
-                        className="bg-gradient-to-r from-red-400 to-red-700 py-3 px-2 sm:px-4 mx-3 rounded-md "
+                        className="bg-gradient-to-r from-red-400 to-red-700 py-3 px-2 sm:px-4 mx-3 rounded-xl text-white dark:text-black"
                     >
                         Contact Us
                     </a>
                     <a
                         href="#briefhistory"
-                        className="py-3 px-4 mx-3 rounded-md border"
+                        className="py-3 px-4 mx-3 rounded-xl border border-red-400 text-red-500 "
                     >
                         Brief History
                     </a>
@@ -175,7 +175,7 @@ const HeroSection = () => {
                     </footer>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

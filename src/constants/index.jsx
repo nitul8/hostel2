@@ -23,8 +23,14 @@ import shekhar from "../assets/Shekhar_Ghatuar.jpeg";
 import debabrat from "../assets/Debabrat_Deka.jpeg";
 
 //Hostel Pic
-import image1 from "../assets/h21.jpeg";
-import image2 from "../assets/h22.jpeg";
+import image1 from "../assets/h2.jpeg";
+import image2 from "../assets/h21.jpeg";
+import image3 from "../assets/h22.jpeg";
+import image4 from "../assets/h24.jpg";
+import image5 from "../assets/h25.jpeg";
+import image6 from "../assets/h26.jpeg";
+import image7 from "../assets/h27.jpg";
+import image8 from "../assets/h28.jpg";
 
 //Nav Items
 export const navItems = [
@@ -220,6 +226,12 @@ export const monitors = [
 
 //Gallery
 export const slides = [
-    {name: "Hostel 2 Front View", src: image1},
-    {name: "Hostel 2 Garden", src: image2},
+    image1,
+    image2,
+    image3,
+    image4,
+    image5,
+    image6,
+    image7,
+    image8,
 ];
