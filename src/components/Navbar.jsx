@@ -15,7 +15,10 @@ const Navbar = () => {
         <header className="fixed w-full top-0 z-50 bg-opacity-90 backdrop-blur-md h-20 flex items-center">
             <div className="container mx-auto flex items-center justify-between px-6">
                 {/* Logo Section */}
-                <div className="flex items-center mx-4">
+                <div
+                    className="flex items-center mx-4 cursor-pointer"
+                    onClick={() => window.location.replace("/")}
+                >
                     <img
                         className="h-10 w-10 mr-2"
                         src={logo}
@@ -27,7 +30,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Desktop Navigation */}
-                <nav className="hidden lg:flex items-center space-x-6">
+                <nav className="hidden lg:flex items-center space-x-8">
                     {navItems.map((item, index) => (
                         <Link
                             key={index}
@@ -38,7 +41,7 @@ const Navbar = () => {
                         </Link>
                     ))}
                     <Link to="/login">
-                        <CircleUser className="h-6 w-6 text-black dark:text-white hover:text-red-500 transition duration-300" />
+                        <CircleUser className="h-8 w-8 mx-4 text-black dark:text-white hover:text-red-500 transition duration-300" />
                     </Link>
                 </nav>
 

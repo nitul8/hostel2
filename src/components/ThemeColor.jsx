@@ -13,13 +13,13 @@ function ThemeColor() {
         <button
             onClick={toggleTheme}
             className={`fixed bottom-8 right-8 w-14 h-14 rounded-full flex items-center justify-center shadow-lg ${
-                isDarkMode ? "bg-gray-800 text-white" : "bg-gray-200 text-black"
+                isDarkMode ? "bg-black text-white" : "bg-white text-black"
             } transition duration-300`}
         >
             {isDarkMode ? (
-                <BsFillSunFill size={24} />
+                <BsFillSunFill size={20} />
             ) : (
-                <BsMoonFill size={24} />
+                <BsMoonFill size={20} />
             )}
         </button>
     );

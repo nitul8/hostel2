@@ -4,7 +4,10 @@ import image1 from "../assets/dui_mane_jui2.png";
 
 const Footer = () => {
     return (
-        <footer className="mt-20 border-t py-10 border-neutral-700" id="footer">
+        <footer
+            className="mt-20 border-t py-10 border-neutral-700 text-lg"
+            id="footer"
+        >
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mx-4 lg:mx-20 text-red-500">
                 {/* Platform Section (Left Aligned on Large Screens, Centered on Small Screens) */}
                 <div className="text-center lg:text-left">
@@ -14,7 +17,7 @@ const Footer = () => {
                             <li key={index}>
                                 <a
                                     href={link.href}
-                                    className="text-neutral-300 hover:text-white"
+                                    className="text-gray-700 dark:text-neutral-300 hover:text-red-500"
                                 >
                                     {link.text}
                                 </a>
@@ -24,11 +27,11 @@ const Footer = () => {
                 </div>
 
                 {/* Hostel Superintendent Section (Centered on All Screens) */}
-                <div className="text-center text-neutral-300">
+                <div className="text-center text-gray-700 dark:text-neutral-300">
                     <h3 className="text-md font-semibold mb-4 text-red-500">
                         Hostel Superintendent
                     </h3>
-                    <p>Dhrubajyoti Baruah</p>
+                    <p className="font-semibold">Dhrubajyoti Baruah</p>
                     <p className="text-sm text-neutral-400">
                         Associate Professor
                         <br />
@@ -43,7 +46,10 @@ const Footer = () => {
                     <h3 className="text-md font-semibold mb-4">Monitors</h3>
                     <ul className="space-y-2">
                         {monitors.map((monitor, index) => (
-                            <li key={index} className="text-neutral-300">
+                            <li
+                                key={index}
+                                className="text-gray-700 dark:text-neutral-300"
+                            >
                                 <span className="font-semibold">
                                     {monitor.name}
                                 </span>
@@ -66,7 +72,7 @@ const Footer = () => {
                 className="w-40 h-auto mx-auto flex justify-center items-center" // Adjusted size and centering
             />
 
-            <div className="text-center text-neutral-500">
+            <div className="text-center text-neutral-500 text-sm">
                 © {new Date().getFullYear()} Nitul Das. All rights reserved.
             </div>
         </footer>
